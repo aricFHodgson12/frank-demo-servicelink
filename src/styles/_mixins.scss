@@ -1,0 +1,21 @@
+@mixin flex-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin desc {
+  font-size: 10px;
+  color: $gray;
+  font-weight: 100;
+}
+
+@mixin title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@mixin subTitle {
+  font-size: 12px;
+  font-weight: 400;
+}

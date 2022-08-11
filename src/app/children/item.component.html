@@ -1,0 +1,14 @@
+<div class="item">
+  <div class="item__content">
+    <label class="checkbox">
+      <input type="checkbox" (change)="checkValue($event)">
+      <span class="checkmark"></span>
+    </label>
+    <p>{{ item.title }}</p>
+  </div>
+  <div class="item__action" *ngIf="checked">
+    <span (click)="minus()"><i class="fa-solid fa-minus fa-2xs"></i></span>
+    <input type="text" value="{{ val }}" />
+    <span (click)="plus()"><i class="fa-solid fa-plus fa-2xs"></i></span>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+@import '../../styles/variables';
+@import '../../styles/checkbox';
+@import '../../styles/mixins';
+
+.item {
+  @include flex-body;
+  margin-bottom: 18px;
+  &__content {
+    @include flex-body;
+    justify-content: flex-start;
+    p {
+      margin: 0px;
+      @include title;
+      font-size: 14px;
+    }
+  }
+
+  &__action {
+    width: 80px;
+    @include flex-body;
+    input {
+      width: 30px;
+      text-align: center;
+      color: $black;
+      border: 1px solid  $lightGray;
+      border-radius: 6px;
+    }
+    span {
+      color: $lightGray;
+      border: 1px solid $lightGray;
+      border-radius: 50%;
+      width: 15px;
+      height: 16px;    
+      @include flex-body;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<button class="btn btn-sm btn-outline-primary" (click)="open(demoModal)">Launch demo modal</button>
+
+<ng-template #demoModal let-modal>
+  <div class="modal-header">
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="modal.dismiss('Cross click')"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="modal-body">
+    <div class="content-header">
+      <div class="content-header__product">
+        <p class="title">Sony</p>
+        <p class="serial-number">XR-65X90J</p>
+        <p class="price">MSRP $2,299.00</p>
+      </div>
+      <div class="content-header__price">
+        <p class="title">Sell Price</p>
+        <p class="price">$2,399.99</p>
+        <p class="comment">15.5% Profit <i class="fa-solid fa-angle-down"></i></p>        
+      </div>
+    </div>
+
+    <div class="content-nav">
+      <div class="content-nav__product">
+        <p class="sub-title">Proposal #2033</p>
+        <p class="title">Dwight Schrute</p>
+        <p class="desc">America Room Upgrades</p>
+      </div>
+      <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+    </div>    
+
+    <div class="content-body">
+      <div class="content-body__header">
+        <p>Select Area(s)</p>
+        <div>
+          <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="#"><i class="fa-solid fa-plus"></i></a>
+        </div>
+      </div>
+      <div class="content-body__list">
+        <app-list></app-list>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Add to Proposal</button>
+  </div>
+</ng-template>

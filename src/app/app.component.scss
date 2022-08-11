@@ -1,0 +1,120 @@
+@import '../styles/variables';
+@import '../styles/checkbox';
+@import '../styles/mixins';
+
+.btn-close {
+  background: $white;
+  position: absolute;
+  top: -35px;
+  opacity: 1;
+  right: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-footer {
+  .btn {
+    width: 100%;
+    color: $white;
+    background: $brand;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 15px;
+  }
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-body {
+  padding: 0rem 0.7rem;
+  .content-header {
+    @include flex-body;
+    padding: 0rem 0.8rem;
+    margin-bottom: 1rem;
+
+    &__product {
+      p {
+        margin: 2px 0px;
+      }
+      .title {
+        @include subTitle;
+      }
+      .serial-number {
+        @include title;
+        color: $black;
+      }
+      .price {
+        @include desc;
+      }
+    }
+
+    &__price {
+      p {
+        margin: 2px 0px;
+      }
+      .title {
+        @include desc;
+      }
+      .price {
+        @include title;
+        color: $brand;
+      }
+      .comment {
+        @include desc;
+      }
+    }    
+  }
+
+  .content-nav {
+    @include flex-body;
+    border: 1px solid $lightGray;
+    padding: 0.8rem;
+    border-radius: 6px;
+    p {
+      margin: 2px 0px;
+    }
+    &__product {
+      .sub-title {
+        @include desc;
+      }
+      .title {
+        @include title;
+        color: $brand;
+      }
+      .desc {
+        @include subTitle;
+      }
+    }
+    i {
+      color: $icon;
+    }
+  }
+
+  .content-body {
+    padding: 1.3rem;
+    &__header {
+      @include flex-body;
+      p {
+        @include subTitle;
+        color: $gray;
+        margin: 0px;
+      }
+      div {
+        @include subTitle;
+        @include flex-body;
+        width: 30px;
+        i {
+          color: $icon;
+        }
+        
+      }
+    }
+
+    &__list{
+      margin-top: 18px;
+    }
+  }
+}
